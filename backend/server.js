@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const fs = require('fs');
-const barcodeFunc = require('./data');
+const barcode = require('./barcode');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -27,7 +27,7 @@ app.get('/api/barcodes', (req, res) => {
         let string = JSON.parse(data);
         string = string[string.length - 1];        
 
-        barcodeFunc.GetBarcodesFromDBAndCompareBarcodes(string, (err, response) => {
+        barcode.GetBarcodesFromDBAndCompareBarcodes(string, (err, response) => {
             if (err) {
                 console.log("ERROR : ", err);
             } else {

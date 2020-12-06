@@ -1,4 +1,7 @@
 
+/**
+ * Get barcode from server and display it on a paragraph.
+ */
 const GetBarcode = () => {
 
     let url = "http://localhost:7033/api/barcodes";

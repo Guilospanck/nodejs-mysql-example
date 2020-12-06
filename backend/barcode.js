@@ -1,5 +1,10 @@
 const mysql = require('mysql');
 
+/**
+ * Query the database and return if barcode exists.
+ * @param {string} barcode 
+ * @param {*} callback 
+ */
 const GetBarcodesFromDBAndCompareBarcodes = (barcode, callback) => {
 
     var connection = mysql.createConnection({
