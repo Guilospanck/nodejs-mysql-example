@@ -1,5 +1,10 @@
 #!/usr/bin/env nodejs
 
+/**
+ *  server.js
+ *   - Our controller
+ */
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
