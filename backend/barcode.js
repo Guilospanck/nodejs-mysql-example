@@ -18,7 +18,7 @@ const GetBarcodesFromDBAndCompareBarcodes = (barcode, callback) => {
 
     connection.query('SELECT * FROM `barcodes` where `barcode` = ?', [barcode], function (error, results, fields) {
         if (error)
-            callback(err, null);
+            callback(error, null);
         else
             callback(null, results);
     });
